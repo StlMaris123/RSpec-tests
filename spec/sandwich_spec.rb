@@ -1,9 +1,9 @@
 Sandwich = Struct.new(:taste, :toppings)
 
 RSpec.describe 'An ideal Sandwich' do
-  def sandwich
-    @sandwich ||= Sandwich.new('delicious', [])
-  end
+ 
+  let(:sandwich) {Sandwich.new('delicious', [])}
+
   it 'is delicious' do
     taste = sandwich.taste
     expect(taste).to eq('delicious')
